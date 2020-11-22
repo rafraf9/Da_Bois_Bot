@@ -1,5 +1,4 @@
 const { exec } = require("child_process");
-const { stdout } = require("process");
 
 module.exports = {
     name: "reload",
@@ -8,7 +7,7 @@ module.exports = {
     execute(message, args){
         message.channel.send("Reloading the bot...");
 
-        exec("git pull", (error, stdout, stderr)=>{
+        exec("git fetch", (error, stdout, stderr)=>{
             if (error) {
                 console.log(`error: ${error.message}`);
                 return;
@@ -18,6 +17,6 @@ module.exports = {
                 return;
             }
             console.log(`stdout: ${stdout}`);
-        })
+        });
     }
 }
