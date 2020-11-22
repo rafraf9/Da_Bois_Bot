@@ -5,9 +5,9 @@ module.exports = {
     description: "reloads the bot",
     roles: ['SuperAdmin', 'Admin'],
     execute(message, args){
-        message.channel.send("Reloading the bot...");
+        message.channel.send("Reloading The Bot...");
 
-        exec("git fetch", (error, stdout, stderr)=>{
+        exec("git pull", function(error, stdout, stderr){
             if (error) {
                 console.log(`error: ${error.message}`);
                 return;
