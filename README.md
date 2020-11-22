@@ -21,3 +21,22 @@ node bot.js
 ```
 
 If any issues come up write them in the issues page
+
+## Creating your own commands:
+Da Bois Bot currenly only allows commands triggered by commands phrases, but hopefully more will come :)
+
+#### Adding a new Triggered Command:
+
+**1)** Add a new file in the commands folder called `your_command_name.js`\
+**2)** To export your your command write in the following format:
+```
+module.exports = {
+ name: "name_of_your_command",
+ description: "what does the command do?",
+ roles: [role1, role2, role3](Optional),
+ excecute(message, args){
+  function_that_excecutes_the_command
+ }
+};
+```
+**3)** if the bot is already running run the reload_all command to load new commands.
