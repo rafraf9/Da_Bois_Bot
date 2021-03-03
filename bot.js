@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 
+//shebson
+
 const client = new Discord.Client();
 const bot_info = require('./bot-info.json');
 client.commands = new Discord.Collection();
